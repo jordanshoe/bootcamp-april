@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+/* .nav ul{
+    list-style: circle outside;
+
+} */
+/* 
+        border: width style color
+        border-radius: 20px 10px 5px 15px;
+        width and height
+        overflow
+            auto
+            scroll
+            hidden
+        padding = space inside the box or element and space between border and content
+        margin = space outside the box or element
+        positive value = pushing the the element
+        negative value = pulling the element closer to each other
+
+         /*  layout properties
+            display = convert
+                inline = block elements display as inline
+                block = inline elements display as block
+                inline-block = (hybrid) = block elements and inline elements display as inline but get the behavior(width,height,margin-top,margin-bottom) of the block elements 
+
+         */ 
+
+
+.header{
+    border:4px solid red ;
+    border-top: 6px double green;
+    border-right: 8px dashed purple;
+    border-bottom: 9px dotted blue;
+    border-left: 10px groove gold;
+    border-radius: 50px 100px 200px 10px;
+    width: 400px;
+    /* height: 100px; */
+    overflow: auto;
+    padding: 20px 40px 30px;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+.header a{
+    border: 2px solid black;
+    /* width: 300px; */
+    /* height: 100px; */
+    padding: 5px;
+    display: inline-block;
+
+}
+.nav{
+    border: 4px solid red;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 100px;
+
+}
+.nav .logo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 4px groove red;
+    padding: 5px;
+    margin-bottom: 20px;
+    display: block;
+    margin: 20px auto;
+}
+.nav .sns ul{
+    border: 2px dashed black;
+}
+.nav .sns li{
+    border: 2px solid red;
+    display: inline-block;
+    width: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.nav .menu a{
+    border: 2px solid red;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: inline-block
+}
+.content1{
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    padding-left: 20px;
+    padding-top: 30px;
+    margin:20px auto 0;
+}
+.content2{
+    width: 100px;
+    height: 100px;
+    border: 2px solid blue;
+    margin: auto;
+    margin-top: 20px;
+}

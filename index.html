@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first website</title>
+</head>
+<body>
+    <!-- block element = elements that display on a new line -->
+    <!-- heading elements = use for title of the content -->
+    <h1><span style="color: green;">h</span>ello <i>world!</i></h1>
+    <h2>heading 2</h2>
+    <h3>heading 3</h3>
+    <h4>heading 4</h4>
+    <h5>heading 5</h5>
+    <h6>heading 6</h6>
+    
+    <!-- paragraph element = use for text content -->
+    <p>this is a paragraph 1</p>
+    <p> Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, beatae.</p>
+
+    <!-- list elements = use for list content
+            ol = ordered list (parent element)
+            ul = unordered list (parent element)
+            li = list item (child element)
+
+            syntax: 
+                    <ol>
+                        <li>content</li>
+                    </ol>
+            nested list = list with in another list
+    -->
+    <div style="background-color: yellow;">
+        <h2>categories</h2>
+        <ol>
+            <li>
+            <b>travel</b> 
+                <ul>
+                    <li><span style="color: red;">asia</span></li>
+                    <li>europe</li>
+                    <li>america</li>
+                    <li>australia</li>
+                </ul>
+            </li>
+            <li>food</li>
+            <li>news</li>
+            <li>sport</li>
+        </ol>
+    </div>
+    
+    <h2>favorites</h2>
+    <ul>
+        <li>basketball</li>
+        <li>football</li>
+        <li>golf</li>
+        <li>badminton</li>
+    </ul>
+
+    <!-- hr = horizontal rule or line -->
+    <hr>
+    <hr>
+
+    <!-- inline elements = elements that display on a same line
+            b = bold
+            i = italic
+            a = anchor element for link
+            img = image element
+            br = break line
+
+            inline elements can be nested inside block elements
+    -->
+    <b>this is a bold element</b>
+    <i>this is an italic element</i>
+
+    <!-- a = anchor
+            a = element
+            href = attribute (hypertext reference = url)
+                    attribute = to add additional information, control the element, and helper of the element
+                attribute name = href
+                attribute value = "https://facebook.com"
+    -->
+    <a href="https://facebook.com" target="blank" >click to facebook</a>
+    <a href="https://kredo.jp" target="blank">click to kredo</a>
+    <a href="sample.html">click to sample page</a>
+    <a href="#top">go to top</a>
+
+    <!-- img = image element
+            img = element
+            src = source(url)(attribute)
+            alt = alternative text (attribute)
+    -->
+    <img src="assets/image/gar.jpg" alt="table and chair photo" width="200px" height="200px">
+    <br>
+    <br>
+    <img src="assets/image/gar.jpg" alt="table and chair photo" width="100px" height="100px">
+    
+    <!-- group elements
+            div = division, create a section, and group block elements and inline elements
+            span = group inline elements only and select a text 
+    -->
+    <div style="background-color: gray;">
+       <h2>this is a div 1 </h2> 
+       <p>Lorem ipsum dolor sit amet.</p>
+       <a href="#">facebook</a>
+       <a href="#">twitter</a>
+       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, perferendis.</p>
+    </div>
+    <div style="background-color: greenyellow;">
+       <h2> this is a div 2</h2>
+       <ul>
+           <li>action</li>
+           <li>drama</li>
+           <li>sci-fi</li>
+           <li>fantasy</li>
+       </ul>
+       <a href="#">instagram</a>
+       <a href="#">youtube</a>
+    </div>
+    <span style="background-color: pink;">
+       <b>this is a span 1</b>
+       <i>Lorem ipsum dolor sit.</i>
+       <p>Lorem ipsum dolor sit amet.</p> 
+    </span>
+    <span style="background-color: yellow;">
+        this is a span 2
+    </span>
+
+    <!-- form elements = get informations or data from the user 
+
+                elements:
+                    form = parent
+                    input
+                    label
+                    select = dropdown list
+                    option
+                    textarea
+                    button
+                attribute names:
+                    action
+                    method
+                    type
+                    name
+                    id
+                    placeholder
+                    value
+                    required
+                    maxlength
+                    minlenght
+                    min
+                    max
+                attribute values:
+                    text
+                    email
+                    password
+                    number
+                    date
+                    file
+                    radio
+                    checkbox
+                grouping element:
+                    fieldset = group form content
+                    legend = label the fieldset
+    
+    -->
+    <form action="https://kredo.jp" method="GET">
+        <fieldset>
+            <legend>Required Information</legend>
+                <label for="fname">your firstname:</label> 
+                <input type="text" name="firstname" id="fname" placeholder="type your firstname here" required minlength="3" maxlength="15">
+                
+                <label for="lname">your lastname:</label> 
+                <input type="text" name="lastname" id="lname" placeholder="type your lastname here" required>
+
+                <label for="email">your email</label>
+                <input type="email" name="email" id="email" placeholder="email@gmail.com">
+
+                <label for="pword">your password</label>
+                <input type="password" name="password" id="pword" placeholder="type your password here">
+
+                <label for="cc-number">Credit card number</label>
+                <input type="number" name="cc-number" id="cc-number" placeholder="type your credit number here" min="10" max="100">
+        </fieldset>
+        <fieldset>
+            <legend>Optional Information</legend>
+                <label for="bday">Birth Date</label>
+                <input type="date" name="birthday" id="bday">
+
+                <label for="photo">Upload Photo</label>
+                <input type="file" name="photo" id="photo">
+
+                <h4>Choose your gender</h4>
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="male">Male</label>
+
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="female">Female</label>
+
+                <input type="radio" name="gender" value="lgbt" id="lgbt">
+                <label for="lgbt">LGBT</label>
+
+                <h4>choose your favorite device/s</h4>
+                <input type="checkbox" name="device" value="laptop" id="laptop">
+                <label for="laptop">Laptop</label>
+
+                <input type="checkbox" name="device" value="tablet" id="tablet">
+                <label for="tablet">Tablet</label>
+
+                <input type="checkbox" name="device" value="ipad" id="ipad">
+                <label for="ipad">Ipad</label>
+                <br>
+                <br>
+                <label for="car">Choose your favorite car</label>
+                <select name="car" id="car">
+                    <option value="none"></option>
+                    <option value="honda">Honda</option>
+                    <option value="mazda">Mazda</option>
+                    <option value="ferrari">ferrari</option>
+                    <option value="ford">Ford</option>
+                </select>
+                <br>
+                <br>
+                <label for="comment">Type your Comments</label>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="comment here."></textarea>
+
+                <input type="submit" name="submit" value="ok">
+                <button type="submit" name="submit">send</button>
+        </fieldset>
+    </form>
+
+    <!-- table elements
+            table = parent
+            tr = table row (row)
+            th = table header (column)
+            td = table data (column)
+    -->
+    <table border="1">
+        <tr>
+         
+            <th>travel</th>
+            <th>sport</th>
+            <th>news</th>
+            <th>food</th>
+        </tr>
+        <tr>
+         
+            <td colspan="2">south america</td>
+            <!-- <td></td> -->
+            <td rowspan="2">cable network news</td>
+            <td rowspan="3">street food</td>
+        </tr>
+        <tr>
+ 
+            <td>asia</td>
+            <td>FiFA</td>
+            <!-- <td>BBC</td> -->
+            <!-- <td>Pizza</td> -->
+        </tr>
+        <tr>
+       
+            <td colspan="3">australia</td>
+            <!-- <td>badminto</td>
+            <td>ABS</td> -->
+            <!-- <td>Pastry</td> -->
+        </tr>
+    </table>
+    Lorem ipsum dolor sit,<br> amet consectetur adipisicing elit. Officia blanditiis quia tempora debitis qui,<b> dolorem</b> odio aut vero facere. Sit.
+</body>
+</html>
